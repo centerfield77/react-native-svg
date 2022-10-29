@@ -83,6 +83,7 @@ export type Linecap = 'butt' | 'square' | 'round';
 export type Linejoin = 'miter' | 'bevel' | 'round';
 
 export interface TouchableProps {
+  children?: React.ReactNode;
   disabled?: boolean;
   onPress?: (event: GestureResponderEvent) => void;
   onPressIn?: (event: GestureResponderEvent) => void;
@@ -98,17 +99,20 @@ export interface ResponderProps extends GestureResponderHandlers {
 }
 
 export interface FillProps {
+  children?: React.ReactNode;
   fill?: ColorValue;
   fillOpacity?: NumberProp;
   fillRule?: FillRule;
 }
 
 export interface ClipProps {
+  children?: React.ReactNode;
   clipRule?: FillRule;
   clipPath?: string;
 }
 
 export interface VectorEffectProps {
+  children?: React.ReactNode;
   vectorEffect?:
     | 'none'
     | 'non-scaling-stroke'
@@ -119,10 +123,12 @@ export interface VectorEffectProps {
 }
 
 export interface DefinitionProps {
+  children?: React.ReactNode;
   id?: string;
 }
 
 export interface StrokeProps {
+  children?: React.ReactNode;
   stroke?: ColorValue;
   strokeWidth?: NumberProp;
   strokeOpacity?: NumberProp;
@@ -143,6 +149,7 @@ export type VectorEffect =
   | 'uri';
 
 export interface FontObject {
+  children?: React.ReactNode;
   fontStyle?: FontStyle;
   fontVariant?: FontVariant;
   fontWeight?: FontWeight;
@@ -188,6 +195,7 @@ export type ColumnMajorTransformMatrix = [
 ];
 
 export interface TransformProps {
+  children?: React.ReactNode;
   translate?: NumberArray;
   translateX?: NumberProp;
   translateY?: NumberProp;
@@ -210,6 +218,7 @@ export interface TransformProps {
 }
 
 export interface TransformedProps {
+  children?: React.ReactNode;
   rotation: number;
   originX: number;
   originY: number;
@@ -222,10 +231,12 @@ export interface TransformedProps {
 }
 
 export interface CommonMaskProps {
+  children?: React.ReactNode;
   mask?: string;
 }
 
 export interface CommonMarkerProps {
+  children?: React.ReactNode;
   marker?: string;
   markerStart?: string;
   markerMid?: string;
@@ -233,6 +244,7 @@ export interface CommonMarkerProps {
 }
 
 export interface NativeProps {
+  children?: React.ReactNode;
   onLayout?: (event: LayoutChangeEvent) => void;
 }
 
